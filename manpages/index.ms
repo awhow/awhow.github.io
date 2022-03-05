@@ -32,6 +32,12 @@ Section 1
 Section 5
 .PP
 .URL groff_filenames.5.html groff_filenames
+.br
+.URL groff_font.5.html groff_font
+.br
+.URL groff_out.5.html groff_out
+.br
+.URL groff_tmac.5.html groff_tmac
 
 .SH
 Section 7
