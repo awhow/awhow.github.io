@@ -1,5 +1,5 @@
 
-MACRO=-man
+MACRO=-mwww -man
 PREPROC=tbl
 
 SOURCEEXT=man
@@ -27,6 +27,8 @@ all: $(OUTFILES)
 %.html: %.$(SOURCEEXT)
 	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml > $@
 
+index.html: index.ms
+	cat $< | $(PREPROC) | troff -mwww -ms -Thtml | post-grohtml -l > $@
 
 clean:
 	rm -f *.dvi
