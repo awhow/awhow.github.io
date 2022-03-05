@@ -1,0 +1,44 @@
+.TL
+Basic Roff Commands
+.PP
+\.ad c Enable line adjustment
+.br
+\.br Line break
+.br
+\.bp Page break
+.br
+\.ce Center next line
+.br
+\.de Define macro
+.br
+\.ds Define string
+.br
+\.fi Fill output lines
+.br
+\.ft Set current font
+.br
+\.in Set indent
+.br
+\.ls Set double or triple spacing
+.br
+\.ll Specify line length
+.br
+\.na No justification of lines
+.br
+\.ne Need lines to end of page
+.br
+\.nf No filling of lines
+.br
+\.nr Define and set number register
+.br
+\.po Set page offset
+.br
+\.ps Set point size
+.br
+\.so Switch to source file and return
+.br
+\.ta Set tab stop position
+.br
+\.ti Set temporary indent
+.br
+\.vs Set vertical line spacing

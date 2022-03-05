@@ -18,7 +18,7 @@ all: $(OUTFILES)
 %.dvi: %.$(SOURCEEXT)
 	cat $< | $(PREPROC) | troff $(MACRO) -Tdvi | grodvi > $@
 
-%.ps: %.$(SOURCEEXT)
+%.ps: %.$(FILEEXT)
 	cat $< | $(PREPROC) | troff $(MACRO) -Tps | grops > $@
 
 %.pdf: %.ps

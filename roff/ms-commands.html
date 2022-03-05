@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Tue Mar  1 18:40:55 2022 -->
+<!-- CreationDate: Sat Mar  5 05:16:38 2022 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,14 +13,12 @@
        table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
        h1      { text-align: center }
 </style>
-<title></title>
+<title>MS Macro Commands</title>
 
 </head>
 <body>
 
-<h1 align="center"></h1>
-
-<a href="#1.">1.</a><br>
+<h1 align="center">MS Macro Commands</h1>
 
 <hr>
 
@@ -28,24 +26,258 @@
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
-<td width="15%">
 
 
-<p style="margin-top: 1em">Paragraph</p></td>
-<td width="85%">
+<p>.LP</p><td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Block paragraphs <br>
+.PP</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>First line of paragrph indented <br>
+.QP</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Paragraph indented from both margins <br>
+.IP</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Paragraph with hanging indent (list item)</p>
+
+<p style="margin-top: 1em">.QP</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Quoted paragrph <br>
+.QS/.QE</p></td>
+<td width="10%">
+
+
+<p>Can be used to start and end multi-paragraph quote
+blocks</p>
+
+<p style="margin-top: 1em">.B</p></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Bold <br>
+.I</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Italic <br>
+.R</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Roman <br>
+.UL</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Underline</p>
+
+<p style="margin-top: 1em">.DS [a]</p></td>
+<td width="10%">
+
+
+<p>Display start (I, [L]eft, [C]enter, [B]lock) <br>
+.DE</p></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Display end <br>
+.ID</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Same as &lsquo;.DS I&lsquo;, but floating <br>
+.LD</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Same as &lsquo;.DS L&lsquo;, but floating <br>
+.CD</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Same as &lsquo;.DS C&lsquo;, but bloating <br>
+.BD</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Same as &lsquo;.DS B&lsquo;, but floating</p>
+
+<p style="margin-top: 1em">.NH [n]</p></td>
+<td width="10%">
+
+
+<p>Numbered heading, n-level <br>
+.SH</p></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Unnumbered heading</p>
+
+<p style="margin-top: 1em">.TL</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Title <br>
+.AU</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Author <br>
+.AI</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Author&rsquo;s Institution <br>
+.AB</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Abstract start <br>
+.AE</p></td>
+<td width="10%"></td>
+<td width="70%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="2%"></td>
+<td width="8%"></td>
+<td width="10%">
+
+
+<p>Abstract end</p></td>
+<td width="10%"></td>
+<td width="70%">
 </td></tr>
 </table>
 
-<p style="margin-left:8%; margin-top: 1em"><b>Bold</b>
-<i>Italic</i> Underline</p>
-
-<h2>1.
-<a name="1."></a>
+<h2>HEADERS and FOOTERS
+<a name="HEADERS and FOOTERS"></a>
 </h2>
 
 
-<p align="center" style="margin-top: 1em">HEADERS and
-FOOTERS</p>
+<p style="margin-top: 1em">.ds LH &lt;string&gt; String for
+left header <br>
+.ds CH &lt;string&gt; String for center header <br>
+.ds RH &lt;string&gt; String for right header <br>
+.ds LF &lt;string&gt; String for left footer <br>
+.ds CF &lt;string&gt; String for center footer <br>
+.ds RF &lt;string&gt; String for right footer</p>
 <hr>
 </body>
 </html>
