@@ -1,7 +1,7 @@
 SOURCE=test.ms
 TARGET=test
 
-MACRO=-ms
+MACRO=-mwww -ms
 
 PREPROC=tbl
 
