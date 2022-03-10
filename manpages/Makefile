@@ -1,5 +1,5 @@
 
-MACRO=-mwww -man
+MACRO=-man
 PREPROC=tbl
 
 SOURCEEXT=man
@@ -9,7 +9,7 @@ SOURCES=$(wildcard *.$(SOURCEEXT))
 OUTFILES=$(subst .$(SOURCEEXT),.$(TARGETEXT),$(SOURCES))
 
 
-all: $(OUTFILES)
+all: $(OUTFILES) index.html
 
 
 %.txt: %.$(SOURCEEXT)
@@ -25,10 +25,10 @@ all: $(OUTFILES)
 	 ps2pdf $<
 
 %.html: %.$(SOURCEEXT)
-	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml > $@
+	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml | sed 's/^<!-- CreationDate: .* -->//' > $@
 
 index.html: index.ms
-	cat $< | $(PREPROC) | troff -mwww -ms -Thtml | post-grohtml -l > $@
+	cat $< | $(PREPROC) | troff -mwww -ms -Thtml | post-grohtml -l | sed 's/^<!-- CreationDate: .* -->//' > $@
 
 clean:
 	rm -f *.dvi

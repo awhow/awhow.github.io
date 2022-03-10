@@ -1,5 +1,5 @@
 
-MACRO=-mwww -ms
+MACRO=-ms
 PREPROC=tbl
 
 SOURCEEXT=ms
@@ -25,7 +25,7 @@ all: $(OUTFILES)
 	 ps2pdf $<
 
 %.html: %.$(SOURCEEXT)
-	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml -l > $@
+	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml -l | sed 's/^<!-- CreationDate: .* -->//' > $@
 
 
 clean:
