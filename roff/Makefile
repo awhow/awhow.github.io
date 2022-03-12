@@ -5,6 +5,9 @@ PREPROC=tbl
 SOURCEEXT=ms
 TARGETEXT=html
 
+STYLESHEET=../style.css
+STYLELINK=.HEAD <link rel="stylesheet" type="text/css" href="${STYLESHEET}">
+
 SOURCES=$(wildcard *.$(SOURCEEXT))
 OUTFILES=$(subst .$(SOURCEEXT),.$(TARGETEXT),$(SOURCES))
 
@@ -25,7 +28,7 @@ all: $(OUTFILES)
 	 ps2pdf $<
 
 %.html: %.$(SOURCEEXT)
-	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml -l | sed 's/^<!--.*-->//' > $@
+	sed '1i $(STYLELINK)' $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml -l | sed 's/^<!--.*-->//' > $@
 
 
 clean:
