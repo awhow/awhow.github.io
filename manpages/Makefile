@@ -25,10 +25,10 @@ all: $(OUTFILES) index.html
 	 ps2pdf $<
 
 %.html: %.$(SOURCEEXT)
-	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml | sed 's/^<!-- CreationDate: .* -->//' > $@
+	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml | sed 's/^<!--.*-->//' > $@
 
 index.html: index.ms
-	cat $< | $(PREPROC) | troff -mwww -ms -Thtml | post-grohtml -l | sed 's/^<!-- CreationDate: .* -->//' > $@
+	cat $< | $(PREPROC) | troff -mwww -ms -Thtml | post-grohtml -l | sed 's/^<!--.*-->//' > $@
 
 clean:
 	rm -f *.dvi

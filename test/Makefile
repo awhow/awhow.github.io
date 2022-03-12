@@ -30,7 +30,7 @@ $(TARGET).pdf: $(TARGET).ps
 	 ps2pdf $(TARGET).ps
 
 $(TARGET).html: $(SOURCE)
-	cat $(SOURCE) | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml -l | sed 's/^<!-- CreationDate: .* -->//' > $(TARGET).html
+	cat $(SOURCE) | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml -l | sed 's/^<!--.*-->//' > $(TARGET).html
 
 
 clean:

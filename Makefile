@@ -25,7 +25,7 @@ all: $(OUTFILES)
 	 ps2pdf $<
 
 %.html: %.$(SOURCEEXT)
-	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml -l | sed 's/^<!-- CreationDate: .* -->//' > $@
+	cat $< | $(PREPROC) | troff $(MACRO) -Thtml | post-grohtml -l | sed 's/^<!--.*-->//' > $@
 
 
 clean:
