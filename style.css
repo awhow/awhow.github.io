@@ -1,5 +1,5 @@
 /* <link rel="stylesheet" type="text/css" href="style.css"> */
 body {
-	width: 8in;
+	max-width: 8in;
 	margin: 0 auto;
 }
